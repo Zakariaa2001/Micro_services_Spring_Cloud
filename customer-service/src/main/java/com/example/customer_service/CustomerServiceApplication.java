@@ -1,6 +1,7 @@
 package com.example.customer_service;
 
 
+import com.example.customer_service.config.CustomerConfigParams;
 import com.example.customer_service.entities.Customer;
 import com.example.customer_service.repository.CustomerRepository;
 import org.springframework.boot.CommandLineRunner;
@@ -10,6 +11,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
+@EnableConfigurationProperties(CustomerConfigParams.class)
 public class CustomerServiceApplication {
 
 	public static void main(String[] args) {
