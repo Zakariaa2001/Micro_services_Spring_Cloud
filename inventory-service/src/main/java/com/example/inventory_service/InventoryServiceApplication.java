@@ -2,14 +2,17 @@ package com.example.inventory_service;
 
 import com.example.inventory_service.entities.Product;
 import com.example.inventory_service.repository.ProductRepository;
+import com.example.inventory_service.sec.RsakeysConfig;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
 import java.util.UUID;
 
 @SpringBootApplication
+@EnableConfigurationProperties(RsakeysConfig.class)
 public class InventoryServiceApplication {
 
 	public static void main(String[] args) {
